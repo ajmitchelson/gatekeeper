@@ -17,7 +17,7 @@ MAILSUBJ="Daily AIDE report for $FQDN"
 # here. For example, MAILTO=$FQDN-aide@domain.example will send the
 # report to host.name.example-aide@domain.example is the local FQDN is
 # host.name.example.
-MAILTO=root
+MAILTO=jason@mainman.home.lan
 
 # Set this to yes to suppress mailings when no changes have been
 # detected during the AIDE run and no error output was given.
@@ -38,7 +38,7 @@ COMMAND=update
 #   file system are only reported once. Possibly dangerous.
 # ifnochange: Copy new database to old database if no changes have
 #   been reported. This is needed for ANF/ARF to work reliably.
-COPYNEWDB=no
+COPYNEWDB=yes
 
 # Set this to yes to truncate the detailed changes part in the mail. The full
 # output will still be listed in the log file.
@@ -48,13 +48,13 @@ TRUNCATEDETAILS=no
 # updates from appearing in the e-mail report. Filtered file changes will
 # still be listed in the log file. This option parses the /var/log/dpkg.log
 # file and implies TRUNCATEDETAILS=yes
-FILTERUPDATES=no
+FILTERUPDATES=yes
 
 # Set this to yes to suppress file changes by package installations
 # from appearing in the e-mail report. Filtered file changes will still
 # be listed in the log file. This option parses the /var/log/dpkg.log file and
 # implies TRUNCATEDETAILS=yes.
-FILTERINSTALLATIONS=no
+FILTERINSTALLATIONS=yes
 
 # This parameter defines how many lines to return per e-mail. Output longer
 # than this value will be truncated in the e-mail sent out.
