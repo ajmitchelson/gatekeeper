@@ -18,7 +18,7 @@ voice:x:22:
 cdrom:x:24:aj
 floppy:x:25:aj
 tape:x:26:
-sudo:x:27:
+sudo:x:27:aj
 audio:x:29:aj
 dip:x:30:aj
 www-data:x:33:
