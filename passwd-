@@ -20,4 +20,6 @@ libuuid:x:100:101::/var/lib/libuuid:/bin/sh
 Debian-exim:x:101:103::/var/spool/exim4:/bin/false
 statd:x:102:65534::/var/lib/nfs:/bin/false
 sshd:x:103:65534::/var/run/sshd:/usr/sbin/nologin
-aj:x:1000:1000::/home/aj:/bin/bash
+aj:x:1000:1000:AJ Mitchelson,,,:/home/aj:/bin/bash
+messagebus:x:104:106::/var/run/dbus:/bin/false
+dnsmasq:x:105:65534::/var/lib/misc:/bin/false

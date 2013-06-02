@@ -18,7 +18,7 @@ voice:*::
 cdrom:*::aj
 floppy:*::aj
 tape:*::
-sudo:*::
+sudo:*::aj
 audio:*::aj
 dip:*::aj
 www-data:*::
