@@ -13,3 +13,4 @@ noc: root
 security: root
 root: aj
 monit: root
+clamav: root
