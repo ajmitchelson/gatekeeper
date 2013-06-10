@@ -5,6 +5,23 @@
 auto lo
 iface lo inet loopback
 
+# The primary wireless network interface
+auto uap0
+iface uap0 inet static
+    address 192.168.1.126
+    netmask 255.255.255.128
+    network 192.168.1.0
+    broadcast 192.168.1.127
+    pre-up /root/initwifi.sh
+
 # The primary network interface
-allow-hotplug eth0
-iface eth0 inet dhcp
+auto eth0
+iface eth0 inet static
+    address 192.168.1.254
+    netmask 255.255.255.128
+    network 192.168.1.0
+    broadcast 192.168.1.255
+
+# The primary inet (ppp) network interface
+auto eth1
+iface eth1 inet dhcp
