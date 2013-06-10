@@ -44,3 +44,21 @@ Ping(ACCEPT)    loc             $FW
 
 ACCEPT		$FW		net		icmp
 ACCEPT		$FW		loc		icmp
+
+#
+# Local DHCP server ports
+#
+ACCEPT		loc		$FW		udp	67,68
+ACCEPT		$FW		loc		udp	67,68
+#
+# Local DNS server ports
+#
+ACCEPT		loc		$FW		udp	53
+ACCEPT		loc		$FW		tcp	53
+ACCEPT		$FW		loc		udp	53
+ACCEPT		$FW		loc		tcp	53
+#
+# Allow $FW to HTTP
+#
+ACCEPT		$FW		net		tcp	80,443
+#

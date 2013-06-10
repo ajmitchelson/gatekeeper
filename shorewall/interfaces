@@ -14,6 +14,6 @@
 FORMAT 2
 ###############################################################################
 #ZONE	INTERFACE	OPTIONS
-net     ppp0            tcpflags,dhcp,nosmurfs,routefilter,logmartians,sourceroute=0
-loc     eth0            tcpflags,nosmurfs,routefilter,logmartians
-loc     uap0            tcpflags,nosmurfs,routefilter,logmartians
+net     ppp0            tcpflags,dhcp,nosmurfs,routefilter,sourceroute=0
+loc     eth0            tcpflags,nosmurfs,routefilter
+loc     uap0            tcpflags,nosmurfs,routefilter
