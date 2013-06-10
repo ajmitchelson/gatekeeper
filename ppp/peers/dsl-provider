@@ -17,7 +17,7 @@
 # This line should work fine if this computer is the only one accessing
 # the Internet through this DSL connection. This is the right line to use
 # for most people.
-pty "/usr/sbin/pppoe -I eth0 -T 80 -m 1452"
+#pty "/usr/sbin/pppoe -I eth0 -T 80 -m 1452"
 
 # An even more conservative version of the previous line, if things
 # don't work using -m 1452... 
@@ -35,7 +35,6 @@ pty "/usr/sbin/pppoe -I eth0 -T 80 -m 1452"
 # by your DSL provider...
 noipdefault
 # Try to get the name server addresses from the ISP.
-usepeerdns
 # Use this connection as the default route.
 # Comment out if you already have the correct default route installed.
 defaultroute
@@ -72,3 +71,6 @@ noaccomp
 # Asynchronous-Control-Character-Map (ACCM)
 default-asyncmap
 
+plugin rp-pppoe.so eth1
+user "zen139670@zen"
+usepeerdns

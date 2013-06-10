@@ -25,3 +25,11 @@ iface eth0 inet static
 # The primary inet (ppp) network interface
 #auto eth1
 #iface eth1 inet dhcp
+
+auto dsl-provider
+iface dsl-provider inet ppp
+pre-up /sbin/ifconfig eth1 up # line maintained by pppoeconf
+provider dsl-provider
+
+auto eth1
+iface eth1 inet manual
