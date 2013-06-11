@@ -30,21 +30,13 @@ DNS(ACCEPT)	$FW		net
 #	Accept SSH connections from the local network to the firewall and DMZ
 #
 SSH(ACCEPT)     loc             $FW
-
-# Drop Ping from the "bad" net zone.
-
-Ping(DROP)   	net             $FW
-
 #
 #       Make ping work bi-directionally between the net, Firewall and local zone
 #       (assumes that the loc-> net policy is ACCEPT).
 #
-
 Ping(ACCEPT)    loc             $FW
-
 ACCEPT		$FW		net		icmp
 ACCEPT		$FW		loc		icmp
-
 #
 # Local DHCP server ports
 #
@@ -55,8 +47,6 @@ ACCEPT		$FW		loc		udp	67,68
 #
 ACCEPT		loc		$FW		udp	53
 ACCEPT		loc		$FW		tcp	53
-ACCEPT		$FW		loc		udp	53
-ACCEPT		$FW		loc		tcp	53
 #
 # Allow $FW to HTTP
 #
