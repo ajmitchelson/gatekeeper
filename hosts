@@ -2,6 +2,8 @@
 192.168.1.254	gatekeeper.home.lan	gatekeeper
 192.168.1.126	gatekeeper.home.lan	gatekeeper
 
+192.168.1.250	n4100plus.home.lan	n4100plus
+
 # The following lines are desirable for IPv6 capable hosts
 ::1     localhost ip6-localhost ip6-loopback
 ff02::1 ip6-allnodes
