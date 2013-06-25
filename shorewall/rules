@@ -62,3 +62,8 @@ ACCEPT		loc		$FW		tcp	4949
 #ACTION        SOURCE    DESTINATION      PROTO      DEST PORT(S)
 NTP(ACCEPT)    $FW	 net
 NTP(ACCEPT)    loc	 net
+#
+#  Allow sendmail requests to the local lan from the firewall
+#
+#ACTION		SOURCE	DESTINATION	PROTO	DEST PORT(S)
+ACCEPT		$FW	loc		tcp	25
