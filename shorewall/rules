@@ -67,3 +67,10 @@ NTP(ACCEPT)    loc	 net
 #
 #ACTION		SOURCE	DESTINATION	PROTO	DEST PORT(S)
 ACCEPT		$FW	loc		tcp	25
+#
+#  Allow connections to the proxy server from the local lan to the firewall
+#
+#ACTION		SOURCE	DESTINATION	PROTO	DEST PORT(S)
+ACCEPT		loc	$FW		tcp	8080
+ACCEPT		$FW	net		tcp	80,443
+ACCEPT		$FW	loc		tcp	80,443
